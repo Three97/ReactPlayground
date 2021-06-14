@@ -1,17 +1,16 @@
 import React from 'react'
 import { func, string } from 'prop-types';
-import { ReactComponent as MoonIcon } from './icons/moon.svg';
-import { ReactComponent as SunIcon } from './icons/sun.svg';
 import ToggleContainer from './Toggle.styled';
 
 const Toggle = ({ theme, actualTheme, toggleTheme }) => {
   const isLight = theme === 'light';
-  console.log(theme);
+  //console.log("theme: " + theme);
+  //console.log("actualTheme: " + actualTheme);
   return (
-    <ToggleContainer theme={actualTheme} lightTheme={isLight} onClick={toggleTheme}>
-      <SunIcon />
-      <MoonIcon />
-    </ToggleContainer>
+    <div title={isLight ? 'Switch to dark mode' : 'Switch to light mode'}>
+      <ToggleContainer theme={actualTheme} isLightTheme={isLight} onClick={toggleTheme}>
+      </ToggleContainer>
+    </div>
   );
 };
 

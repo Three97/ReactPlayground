@@ -21,12 +21,9 @@ function App() {
     <ThemeProvider theme={actualTheme}>
       <>
         <GlobalStyles />
-        <Toggle theme={actualTheme} toggleTheme={toggleTheme} />
+        <Toggle theme={theme} actualTheme={actualTheme} toggleTheme={toggleTheme} />
         <h1>It's a {theme} theme!</h1>
         <footer>
-          <div>Credits:</div>
-          <div><small><b>Sun</b> icon made by <a href="https://www.flaticon.com/authors/smalllikeart">smalllikeart</a> from <a href="https://www.flaticon.com">www.flaticon.com</a></small></div>
-          <div><small><b>Moon</b> icon made by <a href="https://www.freepik.com/home">Freepik</a> from <a href="https://www.flaticon.com">www.flaticon.com</a></small></div>
         </footer>
       </>
     </ThemeProvider>
