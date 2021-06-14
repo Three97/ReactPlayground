@@ -1,5 +1,13 @@
 {
+  "homepage": "https://three97.github.io/ReactPlayground/tree/main/react-theme-provider",
+  "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },
   "dependencies": {
     "styled-components": "^5.3.0"
+  },
+  "devDependencies": {
+    "gh-pages": "^3.2.0"
   }
 }
