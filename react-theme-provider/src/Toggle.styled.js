@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 const ToggleContainer = styled.button`
   background: ${({ theme }) => theme.gradient};
-  border: 1px solid ${({ theme }) => theme.toggleBorder};
+  border: 2px solid ${({ theme }) => theme.toggleBorder};
   border-radius: 30px;
   cursor: pointer;
   display: flex;
@@ -12,8 +12,24 @@ const ToggleContainer = styled.button`
   overflow: hidden;
   padding: 0.5rem;
   position: relative;
-  width: 2rem;
-  height: 2rem;
+  width: 8rem;
+  height: 4rem;
+
+  svg {
+    height: auto;
+    width: 2.5rem;
+    transition: all 0.3s linear;
+
+    // sun icon
+    &:first-child {
+      transform: ${({ isLightTheme }) => isLightTheme ? 'translateY(0)' : 'translateY(100px)'};
+    }
+
+    // moon icon
+    &:nth-child(2) {
+      transform: ${({ isLightTheme }) => isLightTheme ? 'translateY(-100px)' : 'translateY(0)'};
+    }
+  }
 `;
 
 export default ToggleContainer;
